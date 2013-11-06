@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="radar.jquery.js"></script>
+		<script>
+
+			$(function()
+			{
+				$('#radar').radar();
+			});
+		</script>
+		<style type="text/css">
+			@import url('radar.css');
+
+			html,
+			body
+			{
+				height: 100%;
+			}
+
+			body
+			{
+				background: #000;
+			}
+
+			.vertical-align
+			{
+				position: relative;
+				top: 50%;
+			}
+			#radar
+			{
+				margin: auto;
+				margin-top: -100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="vertical-align">
+			<div id="radar"></div>
+		</div>
+	</body>
+
+
+</html>
