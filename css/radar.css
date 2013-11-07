@@ -10,10 +10,10 @@
 	width: 100%;
 	height: 100%;
 	background-image: url('../img/overlay.png');	
-	animation: _rdr_rotate 2.0s 16 linear;	
-	-webkit-animation: _rdr_rotate 2.0s 16 linear;
-	-moz-animation: _rdr_rotate 2.0s 16 linear;
-	-o-animation: _rdr_rotate 2.0s 16 linear;	
+	animation: _rdr_rotate 2.0s 16 linear infinite;
+	-webkit-animation: _rdr_rotate 2.0s infinite linear;
+	-moz-animation: _rdr_rotate 2.0s infinite linear;
+	-o-animation: _rdr_rotate 2.0s infinite linear;	
 }
 
 ._rdr_mask
