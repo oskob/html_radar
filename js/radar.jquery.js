@@ -1,16 +1,10 @@
-
-
 $.fn.radar = function(options)
-{
-	
-	var defaults = {
+{	
+	options = $.extend({
 		prefix: '_rdr_',
 		width: 200,
-		height: 200,
-	}
-	options = $.extend(defaults, options);
-
-	console.log(options);
+		height: 200
+	}, options);
 
 	$radarBackground = $('<div class="' + options.prefix + 'background"></div>');
 	$mask = $('<div class="' + options.prefix + 'mask"></div>')
@@ -19,11 +13,13 @@ $.fn.radar = function(options)
 
 	$(this).css({width: options.width, height: options.height});
 
-	$mask.append($blackOverlay);
-	$radarBackground.append($dot);
-	$radarBackground.append($mask);
-
-	$(this).append($radarBackground);
-
-
+	$(this).append(
+		$radarBackground.append(
+			$dot.append(
+				$mask.append(
+					$blackOverlay
+				)
+			)
+		)
+	);
 }
